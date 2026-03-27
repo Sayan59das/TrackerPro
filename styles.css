@@ -1,0 +1,1308 @@
+/* ==========================================
+   ENTERPRISE DESIGN SYSTEM (Variables)
+   ========================================== */
+:root {
+    --bg-page: #F8FAFC; 
+    --bg-surface: #FFFFFF;
+    --bg-sidebar: #0B1120;
+    
+    --color-text-primary: #0F172A; 
+    --color-text-secondary: #64748B; 
+    --color-text-sidebar: #94A3B8;
+    --color-border: #E2E8F0; 
+    
+    --color-income: #059669; 
+    --color-expense: #DC2626; 
+    --color-brand-primary: #0F172A; 
+    --color-brand-button: #2563EB; 
+    --color-brand-button-hover: #1D4ED8;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+
+    /* Nav background for light mode */
+    --bg-nav: rgba(255, 255, 255, 0.95);
+    --bg-input: #F8FAFC;
+    --bg-toggle-selector: #F1F5F9;
+    --bg-cat-icon: #F1F5F9;
+    --bg-ledger-hover: #F8FAFC;
+    --bar-track: #D1D5DB;
+}
+
+[data-theme="dark"] {
+    --bg-page: #0F172A;
+    --bg-surface: #1E293B;
+    --bg-sidebar: #020817;
+
+    --color-text-primary: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+    --color-text-sidebar: #64748B;
+    --color-border: #334155;
+
+    --color-income: #10B981;
+    --color-expense: #F87171;
+    --color-brand-primary: #F1F5F9;
+    --color-brand-button: #3B82F6;
+    --color-brand-button-hover: #2563EB;
+
+    --bg-nav: rgba(15, 23, 42, 0.95);
+    --bg-input: #1E293B;
+    --bg-toggle-selector: #0F172A;
+    --bg-cat-icon: #1E293B;
+    --bg-ledger-hover: #1E293B;
+    --bar-track: #334155;
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-page);
+    color: var(--color-text-primary);
+    -webkit-font-smoothing: antialiased; 
+}
+
+.hiddenView { 
+    display: none !important; 
+}
+
+.textMuted { 
+    color: var(--color-text-secondary); 
+    font-size: 0.875rem; 
+}
+
+/* ==========================================
+   MARKETING SITE
+   ========================================== */
+.globalNavBar { 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background: var(--bg-nav); 
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid var(--color-border); 
+    z-index: 1000; 
+    padding: 16px 0;
+}
+
+.navContainer { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 24px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.brandLogo { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: var(--color-brand-primary); 
+}
+
+.brandAccent { 
+    color: var(--color-brand-button); 
+}
+
+.navLinks { 
+    display: flex; 
+    gap: 32px; 
+}
+
+.navItem { 
+    text-decoration: none; 
+    color: var(--color-text-secondary); 
+    font-weight: 500; 
+    transition: color 0.2s; 
+}
+
+.navItem:hover { 
+    color: var(--color-brand-primary); 
+}
+
+.outlineButton { 
+    border: 2px solid var(--color-border); 
+    padding: 8px 16px; 
+    border-radius: var(--radius-sm); 
+    cursor: pointer; 
+    background: transparent; 
+    font-weight: 600; 
+    color: var(--color-brand-primary);
+}
+
+.outlineButton:hover { 
+    border-color: var(--color-brand-button); 
+    color: var(--color-brand-button); 
+}
+
+.heroSection { 
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding-top: 80px;
+}
+
+.landingContentBlock { 
+    max-width: 600px; 
+}
+
+.brandBadge { 
+    display: inline-block; 
+    background: rgba(37, 99, 235, 0.1); 
+    color: var(--color-brand-button); 
+    padding: 6px 12px; 
+    border-radius: 20px; 
+    font-weight: 600; 
+    margin-bottom: 24px; 
+}
+
+.heroHeadline { 
+    font-size: 3.5rem; 
+    font-weight: 800; 
+    line-height: 1.1; 
+    margin-bottom: 16px; 
+    letter-spacing: -1px; 
+}
+
+.textHighlight { 
+    color: var(--color-brand-button); 
+}
+
+.heroSubtext { 
+    font-size: 1.125rem; 
+    color: var(--color-text-secondary); 
+    margin-bottom: 40px; 
+}
+
+.primaryCTAButton { 
+    background: var(--color-brand-button); 
+    color: white; 
+    border: none; 
+    padding: 16px 32px; 
+    font-size: 1.125rem; 
+    font-weight: 600; 
+    border-radius: var(--radius-md); 
+    cursor: pointer; 
+    transition: 0.2s; 
+}
+
+.primaryCTAButton:hover { 
+    background: var(--color-brand-button); 
+    transform: translateY(-2px); 
+    box-shadow: 0 10px 15px rgba(37, 99, 235, 0.2); 
+}
+
+.marketingSection { 
+    padding: 100px 24px; 
+}
+
+.sectionAlternateBg { 
+    background-color: var(--bg-surface); 
+}
+
+.sectionContainer { 
+    max-width: 1000px; 
+    margin: 0 auto; 
+}
+
+.sectionTitleCenter { 
+    text-align: center; 
+    font-size: 2.5rem; 
+    font-weight: 800; 
+    margin-bottom: 40px; 
+    letter-spacing: -0.5px;
+}
+
+.featuresGrid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 32px; 
+}
+
+.featureCard { 
+    padding: 32px; 
+    border-radius: var(--radius-md); 
+    border: 1px solid var(--color-border); 
+    background: var(--bg-page); 
+    transition: 0.3s; 
+}
+
+.featureCard:hover { 
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-card); 
+}
+
+.featureIcon { 
+    font-size: 2.5rem; 
+    margin-bottom: 16px; 
+}
+
+.featureTitle { 
+    font-size: 1.25rem; 
+    font-weight: 700; 
+    margin-bottom: 12px;
+}
+
+.featureText { 
+    color: var(--color-text-secondary); 
+    line-height: 1.6;
+}
+
+/* About Us Layout */
+.splitLayout { 
+    display: flex; 
+    align-items: center; 
+    gap: 64px; 
+}
+
+.splitTextContent, .splitImageContent { 
+    flex: 1; 
+}
+
+.sectionTitleLeft { 
+    font-size: 2.5rem; 
+    font-weight: 800; 
+    margin-bottom: 24px; 
+    color: var(--color-brand-primary); 
+}
+
+.paragraphText { 
+    font-size: 1.125rem; 
+    color: var(--color-text-secondary); 
+    line-height: 1.7; 
+    margin-bottom: 16px; 
+}
+
+.imagePlaceholder { 
+    background: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-button)); 
+    height: 400px; 
+    border-radius: var(--radius-lg); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.25rem; 
+    box-shadow: var(--shadow-md); 
+}
+
+/* ==========================================
+   BMW-STYLE CONTACT SECTION
+   ========================================== */
+.bmwContactSection { 
+    background-color: #050505; 
+    color: #ffffff; 
+    padding: 120px 24px; 
+}
+
+.bmwContactWrapper { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 80px; 
+    align-items: center; 
+}
+
+.bmwTitle { 
+    font-size: 3.5rem; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin-bottom: 24px; 
+    line-height: 1.1; 
+    color: #FFFFFF;
+}
+
+.bmwSub { 
+    font-size: 1.125rem; 
+    color: #888888; 
+    line-height: 1.6; 
+    font-weight: 300; 
+}
+
+.bmwForm { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 32px; 
+}
+
+.bmwInput { 
+    width: 100%; 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #333333; 
+    color: white; 
+    padding: 12px 0; 
+    font-size: 1.125rem; 
+    font-weight: 300; 
+    font-family: 'Inter', sans-serif; 
+    transition: border-color 0.3s ease; 
+    outline: none; 
+    resize: vertical; 
+}
+
+.bmwInput::placeholder { 
+    color: #555555; 
+}
+
+.bmwInput:focus { 
+    border-bottom-color: var(--color-brand-button); 
+}
+
+.bmwSubmitBtn { 
+    background: transparent; 
+    border: 1px solid white; 
+    color: white; 
+    padding: 18px 36px; 
+    font-size: 0.875rem; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 24px; 
+    margin-top: 16px; 
+    width: max-content;
+}
+
+.bmwSubmitBtn:hover { 
+    background: white; 
+    color: black; 
+}
+
+.globalFooter { 
+    text-align: center; 
+    padding: 40px; 
+    border-top: 1px solid var(--color-border); 
+    background: var(--bg-surface);
+}
+
+@media (max-width: 768px) {
+    .splitLayout, .bmwContactWrapper { 
+        flex-direction: column; 
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    
+    .bmwTitle { 
+        font-size: 2.5rem; 
+    }
+}
+
+/* ==========================================
+   ENTERPRISE DASHBOARD
+   ========================================== */
+.dashboardLayout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
+    background: var(--bg-page);
+    animation: entranceAnimation 0.4s ease forwards;
+}
+
+@keyframes entranceAnimation {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.98); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+}
+
+/* SIDEBAR */
+.dashSidebar { 
+    width: 280px; 
+    background-color: var(--bg-sidebar); 
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 24px; 
+    border-right: 1px solid rgba(255,255,255,0.05); 
+}
+
+.dashSidebar .brandLogo { 
+    color: white; 
+    margin-bottom: 32px; 
+}
+
+.dashSidebar .brandAccent { 
+    color: #3B82F6; 
+}
+
+.userProfileCard { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    background: rgba(255,255,255,0.05); 
+    padding: 16px; 
+    border-radius: var(--radius-md); 
+    margin-bottom: 32px; 
+}
+
+.userAvatar { 
+    width: 40px; 
+    height: 40px; 
+    background: #3B82F6; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+}
+
+.userInfo { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.seamlessNameInput {
+    background: transparent;
+    border: 1px solid transparent;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: inherit;
+    width: 100%;
+    padding: 2px 4px;
+    margin-left: -4px;
+    border-radius: 4px;
+    transition: 0.2s;
+    outline: none;
+}
+
+.seamlessNameInput:hover { 
+    background: rgba(255,255,255,0.1); 
+    border-color: rgba(255,255,255,0.2); 
+    cursor: text; 
+}
+
+.seamlessNameInput:focus { 
+    background: white; 
+    color: var(--color-text-primary); 
+    border-color: white; 
+}
+
+.userRole { 
+    font-size: 0.75rem; 
+    color: var(--color-text-sidebar); 
+    margin-left: 2px; 
+}
+
+.sidebarNav { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+    flex: 1; 
+}
+
+.sidebarLink { 
+    text-decoration: none; 
+    color: var(--color-text-sidebar); 
+    padding: 12px 16px; 
+    border-radius: var(--radius-sm); 
+    font-weight: 500; 
+    transition: 0.2s; 
+}
+
+.sidebarLink:hover, .sidebarLink.active { 
+    background: rgba(255,255,255,0.1); 
+    color: white; 
+}
+
+.sidebarWidgets { 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    padding-top: 24px; 
+    margin-bottom: 24px; 
+}
+
+.widgetBox { 
+    margin-bottom: 16px; 
+}
+
+.widgetBox .inputLabel { 
+    color: var(--color-text-sidebar); 
+}
+
+.sidebarInput { 
+    background-color: #FFFFFF !important; 
+    color: #0F172A !important; 
+    border: 2px solid transparent; 
+}
+
+.sidebarInput::placeholder { 
+    color: #64748B !important; 
+}
+
+.sidebarInput:focus { 
+    border-color: #3B82F6; 
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4); 
+}
+
+.sidebarExitBtn { 
+    background: transparent; 
+    border: none; 
+    color: var(--color-text-sidebar); 
+    cursor: pointer; 
+    text-align: left; 
+    padding: 12px 0; 
+    font-weight: 500; 
+}
+
+.sidebarExitBtn:hover { 
+    color: white; 
+}
+
+/* MAIN CONTENT AREA */
+.dashMainContent { 
+    flex: 1; 
+    overflow-y: auto; 
+    padding: 40px 48px; 
+}
+
+.mainHeader { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-end; 
+    margin-bottom: 32px; 
+}
+
+.greetingText { 
+    font-size: 2rem; 
+    font-weight: 800; 
+    letter-spacing: -0.5px; 
+}
+
+.dateSubtext {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.headerControls { 
+    display: flex; 
+    gap: 16px; 
+    align-items: center; 
+}
+
+.searchInput { 
+    min-width: 250px; 
+    border-radius: 20px; 
+    padding: 10px 16px; 
+}
+
+.dangerOutlineBtn { 
+    border: 1px solid var(--color-expense); 
+    color: var(--color-expense); 
+    background: transparent; 
+    padding: 10px 16px; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: 0.2s;
+}
+
+.dangerOutlineBtn:hover { 
+    background: var(--color-expense); 
+    color: white; 
+}
+
+/* QUAD METRICS GRID */
+.metricsQuadGrid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 24px; 
+    margin-bottom: 32px; 
+}
+
+.metricCard { 
+    background: var(--bg-surface); 
+    padding: 24px; 
+    border-radius: var(--radius-md); 
+    box-shadow: var(--shadow-card); 
+    border: 1px solid var(--color-border); 
+}
+
+.metricLabel { 
+    font-size: 0.875rem; 
+    color: var(--color-text-secondary); 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    margin-bottom: 8px; 
+}
+
+.metricAmount { 
+    font-size: 1.75rem; 
+    font-weight: 700; 
+}
+
+.incomeAmount { 
+    color: var(--color-income); 
+}
+
+.expenseAmount { 
+    color: var(--color-expense); 
+}
+
+/* VISUAL ANALYTICS BAR */
+.analyticsSection { 
+    background: var(--bg-surface); 
+    padding: 20px 24px; 
+    border-radius: var(--radius-md); 
+    box-shadow: var(--shadow-card); 
+    border: 1px solid var(--color-border); 
+    margin-bottom: 32px; 
+}
+
+.barLabels { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    font-size: 0.875rem;
+}
+
+.visualBarTrack { 
+    width: 100%; 
+    height: 12px; 
+    background: var(--bar-track); 
+    border-radius: 6px; 
+    overflow: hidden; 
+}
+
+.visualBarFill { 
+    height: 100%; 
+    background: var(--color-expense); 
+    width: 0%; 
+    transition: width 0.5s ease-out; 
+}
+
+/* SPLIT LAYOUT */
+.dashboardSplitLayout { 
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
+    gap: 32px; 
+}
+
+.splitColumn { 
+    background: var(--bg-surface); 
+    padding: 24px; 
+    border-radius: var(--radius-md); 
+    box-shadow: var(--shadow-card); 
+    border: 1px solid var(--color-border); 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.sectionTitle { 
+    font-size: 1.125rem; 
+    font-weight: 700; 
+    margin-bottom: 20px; 
+    border-bottom: 1px solid var(--color-border); 
+    padding-bottom: 12px; 
+}
+
+/* Forms */
+.inputWrapper { 
+    margin-bottom: 16px; 
+}
+
+.inputLabel { 
+    display: block; 
+    font-size: 0.875rem; 
+    font-weight: 600; 
+    margin-bottom: 6px; 
+}
+
+.cleanInput { 
+    width: 100%; 
+    padding: 12px 16px; 
+    border: 1px solid var(--color-border); 
+    border-radius: var(--radius-sm); 
+    font-size: 0.95rem; 
+    background: var(--bg-input); 
+    color: var(--color-text-primary);
+    outline: none; 
+    transition: 0.2s;
+}
+
+.cleanInput:focus { 
+    border-color: var(--color-brand-button); 
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); 
+    background: var(--bg-surface); 
+}
+
+.currencyInputWrapper { 
+    position: relative; 
+}
+
+.currencySymbol { 
+    position: absolute; 
+    left: 16px; 
+    top: 12px; 
+    font-weight: 600; 
+    color: var(--color-text-secondary); 
+}
+
+.withCurrency { 
+    padding-left: 32px; 
+}
+
+.actionButtonPrimary { 
+    width: 100%; 
+    background: var(--color-brand-button); 
+    color: white; 
+    border: none; 
+    padding: 14px; 
+    font-weight: 600; 
+    border-radius: var(--radius-sm); 
+    cursor: pointer; 
+    transition: 0.2s; 
+}
+
+.actionButtonPrimary:hover { 
+    background: var(--color-brand-button-hover); 
+}
+
+.smallBtn { 
+    padding: 10px; 
+    font-size: 0.875rem; 
+    margin-top: 8px; 
+}
+
+/* ==========================================
+   CSS-ONLY UI TOGGLES & DROPDOWNS
+   ========================================== */
+.hiddenRadio { 
+    display: none; 
+}
+
+.transactionTypeSelector { 
+    display: flex; 
+    background: var(--bg-toggle-selector); 
+    padding: 4px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    border: 1px solid var(--color-border); 
+}
+
+.toggleLabel { 
+    flex: 1; 
+    text-align: center; 
+    padding: 8px; 
+    font-size: 0.875rem; 
+    font-weight: 600; 
+    color: var(--color-text-secondary); 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: 0.2s; 
+}
+
+/* Highlight active toggle pill */
+#typeExpense:checked ~ .transactionTypeSelector label[for="typeExpense"] {
+    background: var(--bg-surface); 
+    color: var(--color-expense); 
+    box-shadow: var(--shadow-sm);
+}
+
+#typeIncome:checked ~ .transactionTypeSelector label[for="typeIncome"] {
+    background: var(--bg-surface); 
+    color: var(--color-income); 
+    box-shadow: var(--shadow-sm);
+}
+
+/* Hide/Show Dropdowns natively with CSS */
+.incomeCategoryGroup { 
+    display: none; 
+}
+
+#typeExpense:checked ~ .expenseCategoryGroup { 
+    display: block; 
+}
+
+#typeExpense:checked ~ .incomeCategoryGroup { 
+    display: none; 
+}
+
+#typeIncome:checked ~ .expenseCategoryGroup { 
+    display: none; 
+}
+
+#typeIncome:checked ~ .incomeCategoryGroup { 
+    display: block; 
+}
+
+/* Ledger */
+.fullHeightScroll { 
+    flex: 1; 
+    overflow-y: auto; 
+    max-height: 500px; 
+    padding-right: 8px; 
+}
+
+.fullHeightScroll::-webkit-scrollbar { 
+    width: 6px; 
+}
+
+.fullHeightScroll::-webkit-scrollbar-thumb { 
+    background-color: #CBD5E1; 
+    border-radius: 10px; 
+}
+
+.ledgerList { 
+    list-style: none; 
+}
+
+.ledgerItem { 
+    display: grid; 
+    grid-template-columns: auto 1fr auto auto; 
+    align-items: center; 
+    gap: 16px; 
+    padding: 16px 12px; 
+    border-bottom: 1px solid var(--color-border); 
+    transition: 0.2s; 
+}
+
+.ledgerItem:hover { 
+    background: var(--bg-ledger-hover); 
+}
+
+.catIcon { 
+    font-size: 1.5rem; 
+    background: var(--bg-cat-icon); 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+}
+
+.ledgerItemDesc { 
+    font-weight: 600; 
+    font-size: 0.95rem; 
+}
+
+.ledgerItemDate { 
+    font-size: 0.75rem; 
+    color: var(--color-text-secondary); 
+    margin-top: 4px; 
+}
+
+.ledgerItemValue { 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+    text-align: right;
+}
+
+.ledgerItem.incomeItem .ledgerItemValue { 
+    color: var(--color-income); 
+}
+
+.ledgerItem.expenseItem .ledgerItemValue { 
+    color: var(--color-expense); 
+}
+
+.deleteBtn { 
+    background: transparent; 
+    border: none; 
+    color: #94A3B8; 
+    cursor: pointer; 
+    font-size: 1.2rem; 
+    padding: 4px; 
+    border-radius: 4px;
+}
+
+.deleteBtn:hover { 
+    color: var(--color-expense); 
+    background: #FEE2E2; 
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE STYLES
+   ========================================== */
+
+/* Hamburger menu button (hidden on desktop) */
+.mobileMenuBtn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+}
+
+.mobileMenuBtn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-brand-primary);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Mobile sidebar overlay */
+.sidebarOverlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+}
+
+/* Theme toggle button */
+.themeToggleBtn {
+    background: var(--bg-input);
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text-primary);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: background 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.themeToggleBtn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at 60% 35%, rgba(255,255,255,0.18), transparent 70%);
+    pointer-events: none;
+}
+
+.themeToggleBtn:hover {
+    border-color: var(--color-brand-button);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15), 0 2px 8px rgba(0,0,0,0.12);
+    transform: scale(1.08);
+}
+
+.themeToggleBtn:active {
+    transform: scale(0.95);
+}
+
+/* Sidebar variant — wider pill shape */
+.themeToggleBtn.sidebarThemeBtn {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    gap: 8px;
+    justify-content: center;
+    height: auto;
+    padding: 10px 14px;
+    letter-spacing: 0.3px;
+    color: var(--color-text-sidebar);
+    border-color: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+}
+
+.themeToggleBtn.sidebarThemeBtn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(59,130,246,0.5);
+    color: white;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Mobile dashboard top bar - hidden by default, shown via media query */
+.mobileDashHeader {
+    display: none;
+}
+
+.sidebarOverlay.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    /* --- NAV --- */
+    .navLinks {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        flex-direction: column;
+        padding: 16px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .navLinks.navOpen {
+        display: flex;
+    }
+
+    .mobileMenuBtn {
+        display: flex;
+    }
+
+    .navContainer {
+        padding: 0 16px;
+    }
+
+    /* --- HERO --- */
+    .heroHeadline {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .heroSubtext {
+        font-size: 1rem;
+    }
+
+    .landingContentBlock {
+        padding: 0 16px;
+    }
+
+    .primaryCTAButton {
+        font-size: 1rem;
+        padding: 14px 24px;
+    }
+
+    /* --- MARKETING SECTIONS --- */
+    .marketingSection {
+        padding: 60px 16px;
+    }
+
+    .sectionTitleCenter {
+        font-size: 1.75rem;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .featureCard {
+        padding: 24px;
+    }
+
+    .splitLayout {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .sectionTitleLeft {
+        font-size: 1.75rem;
+    }
+
+    .paragraphText {
+        font-size: 1rem;
+    }
+
+    .imagePlaceholder {
+        height: 200px;
+        font-size: 1rem;
+    }
+
+    /* --- CONTACT SECTION --- */
+    .bmwContactSection {
+        padding: 60px 16px;
+    }
+
+    .bmwContactWrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .bmwTitle {
+        font-size: 2rem;
+    }
+
+    .bmwSub {
+        font-size: 1rem;
+    }
+
+    /* --- DASHBOARD LAYOUT --- */
+    .dashboardLayout {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+    }
+
+    /* Sidebar becomes a slide-in drawer */
+    .dashSidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        height: 100vh;
+        z-index: 100;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .dashSidebar.open {
+        left: 0;
+    }
+
+    /* Mobile top bar for dashboard */
+    .mobileDashHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--bg-sidebar);
+        padding: 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+    }
+
+    /* Push content down so it doesn't hide under the fixed bar */
+    .dashMainContent {
+        padding-top: 72px;
+    }
+
+    .mobileDashHeader .brandLogo {
+        color: white;
+        font-size: 1.25rem;
+    }
+
+    .mobileDashHeader .brandAccent {
+        color: #3B82F6;
+    }
+
+    .mobileHamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 4px;
+    }
+
+    .mobileHamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+    }
+
+    /* Main content full width */
+    .dashMainContent {
+        padding: 72px 16px 20px;
+        width: 100%;
+    }
+
+    /* Header stacks vertically */
+    .mainHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .greetingText {
+        font-size: 1.5rem;
+    }
+
+    .headerControls {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .searchInput {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .dangerOutlineBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Metrics: 2 columns on mobile */
+    .metricsQuadGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .metricCard {
+        padding: 16px;
+    }
+
+    .metricAmount {
+        font-size: 1.25rem;
+    }
+
+    /* Analytics bar */
+    .analyticsSection {
+        margin-bottom: 20px;
+    }
+
+    /* Split layout stacks vertically */
+    .dashboardSplitLayout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fullHeightScroll {
+        max-height: 350px;
+    }
+
+    /* Ledger items more compact */
+    .ledgerItem {
+        gap: 10px;
+        padding: 12px 8px;
+    }
+
+    .ledgerItemValue {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .heroHeadline {
+        font-size: 1.8rem;
+    }
+
+    .metricsQuadGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .metricAmount {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackerPro | Enterprise Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="marketingSiteWrapper">
+        <nav class="globalNavBar">
+            <div class="navContainer">
+                <div class="brandLogo">Tracker<span class="brandAccent">Pro</span></div>
+                <div class="navLinks">
+                    <a href="#sectionFeatures" class="navItem">Features</a>
+                    <a href="#sectionAbout" class="navItem">About Us</a>
+                    <a href="#sectionContact" class="navItem">Contact</a>
+                </div>
+                <button id="navLaunchDashboard" class="textButtonSecondary outlineButton">Login / Dashboard</button>
+                <button id="themeToggleNav" class="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+                <button class="mobileMenuBtn" id="mobileNavToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="heroSection">
+            <div class="landingContentBlock">
+                <div class="brandBadge">TrackerPro 2.0 Enterprise</div>
+                <h1 class="heroHeadline">Master Your Finances with <span class="textHighlight">Precision.</span></h1>
+                <p class="heroSubtext">Experience an enterprise-grade, blazing fast expense tracking dashboard designed for maximum clarity and minimal cognitive load.</p>
+                <button id="buttonLaunchDashboard" class="primaryCTAButton">
+                    Open Dashboard <span class="arrowIcon">→</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="sectionFeatures" class="marketingSection sectionAlternateBg">
+            <div class="sectionContainer">
+                <h2 class="sectionTitleCenter">Engineered for Performance</h2>
+                <div class="featuresGrid">
+                    <div class="featureCard">
+                        <div class="featureIcon">⚡</div>
+                        <h3 class="featureTitle">Blazing Fast SPA</h3>
+                        <p class="featureText">No page reloads. Our Single Page Architecture ensures real-time updates instantly.</p>
+                    </div>
+                    <div class="featureCard">
+                        <div class="featureIcon">🔒</div>
+                        <h3 class="featureTitle">Local First Security</h3>
+                        <p class="featureText">Your data never leaves your device. Everything is processed and encrypted locally.</p>
+                    </div>
+                    <div class="featureCard">
+                        <div class="featureIcon">🧠</div>
+                        <h3 class="featureTitle">Zero Cognitive Load</h3>
+                        <p class="featureText">No bloated graphs. Just the pure, precise data you need to make fast financial decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sectionAbout" class="marketingSection">
+            <div class="sectionContainer splitLayout">
+                <div class="splitTextContent">
+                    <h2 class="sectionTitleLeft">Our Philosophy</h2>
+                    <p class="paragraphText">TrackerPro was born out of frustration with bloated, ad-filled finance apps. We started as a simple engineering experiment to build the fastest, cleanest expense ledger possible.</p>
+                    <p class="paragraphText">We believe in high-contrast design, clean architecture, and giving you absolute control over your financial narrative. No server tracking, no lag, just pure performance.</p>
+                </div>
+                <div class="splitImageContent">
+                    <div class="imagePlaceholder">Building a better financial future.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sectionContact" class="bmwContactSection">
+            <div class="bmwContactWrapper">
+                <div class="bmwTextSide">
+                    <h2 class="bmwTitle">Connect With<br>Excellence.</h2>
+                    <p class="bmwSub">Elevate your financial control. Reach out for enterprise deployment, custom integrations, or exclusive technical support.</p>
+                </div>
+                <div class="bmwFormSide">
+                    <form id="contactForm" class="bmwForm">
+                        <div class="bmwInputGroup">
+                            <input type="text" class="bmwInput" placeholder="Full Name" required>
+                        </div>
+                        <div class="bmwInputGroup">
+                            <input type="email" class="bmwInput" placeholder="Email Address" required>
+                        </div>
+                        <div class="bmwInputGroup">
+                            <textarea class="bmwInput" rows="1" placeholder="How can we assist you?" required></textarea>
+                        </div>
+                        <button type="submit" class="bmwSubmitBtn">Send Message <span class="arrow">→</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="globalFooter"><p>&copy; 2026 TrackerPro. Engineered with precision.</p></footer>
+    </div>
+
+    <main id="appDashboardWrapper" class="dashboardLayout hiddenView">
+
+        <div class="mobileDashHeader" id="mobileDashHeader">
+            <div class="brandLogo">Tracker<span class="brandAccent">Pro</span></div>
+            <div style="display:flex;align-items:center;gap:10px;">
+                <button id="themeToggleDash" class="themeToggleBtn" aria-label="Toggle theme">🌙</button>
+                <button class="mobileHamburger" id="mobileSidebarToggle" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="sidebarOverlay" id="sidebarOverlay"></div>
+
+        <aside class="dashSidebar" id="dashSidebar">
+            <div class="sidebarHeader">
+                <div class="brandLogo">Tracker<span class="brandAccent">Pro</span></div>
+            </div>
+            
+            <div class="userProfileCard">
+                <div class="userAvatar" id="userAvatarText">G</div>
+                <div class="userInfo">
+                    <input type="text" id="userProfileName" class="seamlessNameInput" value="Ghost" spellcheck="false" title="Click to edit name">
+                    <p class="userRole">Admin</p>
+                </div>
+            </div>
+
+            <nav class="sidebarNav">
+                <a href="#" class="sidebarLink active">📊 Dashboard</a>
+                <a href="#" class="sidebarLink">💳 Transactions</a>
+                <a href="#" class="sidebarLink">📈 Analytics</a>
+            </nav>
+
+            <div class="sidebarWidgets">
+                <div class="widgetBox">
+                    <label class="inputLabel">Monthly Budget (₹)</label>
+                    <input type="number" id="inputMonthlyBudget" class="cleanInput sidebarInput" placeholder="e.g. 20000">
+                </div>
+                
+                <div class="widgetBox">
+                    <label class="inputLabel">Base Salary (₹)</label>
+                    <input type="number" id="inputBaseSalary" class="cleanInput sidebarInput" placeholder="e.g. 50000">
+                    <button id="btnQuickSalary" class="actionButtonPrimary smallBtn">+ Receive Salary</button>
+                </div>
+            </div>
+
+            <button id="buttonCloseDashboard" class="sidebarExitBtn">← Exit System</button>
+            <button id="themeToggleSidebar" class="themeToggleBtn sidebarThemeBtn" aria-label="Toggle theme">🌙 Dark Mode</button>
+        </aside>
+
+        <div class="dashMainContent">
+            
+            <header class="mainHeader">
+                <div>
+                    <h2 class="greetingText" id="greetingMessage">Good Morning</h2>
+                    <p class="dateSubtext" id="currentDateDisplay">Today's Overview</p>
+                </div>
+                <div class="headerControls">
+                    <input type="text" id="searchTransactions" class="cleanInput searchInput" placeholder="🔍 Search ledger...">
+                    <button id="btnClearData" class="dangerOutlineBtn">Wipe Data</button>
+                </div>
+            </header>
+
+            <section class="metricsQuadGrid">
+                <div class="metricCard">
+                    <p class="metricLabel">Total Balance</p>
+                    <h2 class="metricAmount" id="displayMasterBalance">₹0.00</h2>
+                </div>
+                <div class="metricCard">
+                    <p class="metricLabel">Total Income</p>
+                    <h2 class="metricAmount incomeAmount" id="displayTotalIncome">+₹0.00</h2>
+                </div>
+                <div class="metricCard">
+                    <p class="metricLabel">Total Expense</p>
+                    <h2 class="metricAmount expenseAmount" id="displayTotalExpense">-₹0.00</h2>
+                </div>
+                <div class="metricCard">
+                    <p class="metricLabel">Remaining Budget</p>
+                    <h2 class="metricAmount" id="displayRemainingBudget">₹0.00</h2>
+                </div>
+            </section>
+
+            <section class="analyticsSection">
+                <div class="barLabels">
+                    <span class="textMuted">Expense Ratio</span>
+                    <span id="expenseRatioText">0%</span>
+                </div>
+                <div class="visualBarTrack">
+                    <div class="visualBarFill" id="expenseVisualBar"></div>
+                </div>
+            </section>
+
+            <section class="dashboardSplitLayout">
+                
+                <div class="splitColumn formColumn">
+                    <h3 class="sectionTitle">Record Transaction</h3>
+                    <form id="financialEntryForm" class="entryForm enterpriseForm">
+                        
+                        <input type="radio" id="typeExpense" name="transactionType" value="expense" checked class="hiddenRadio">
+                        <input type="radio" id="typeIncome" name="transactionType" value="income" class="hiddenRadio">
+
+                        <div class="transactionTypeSelector">
+                            <label for="typeExpense" class="toggleLabel">Expense</label>
+                            <label for="typeIncome" class="toggleLabel">Income</label>
+                        </div>
+
+                        <div class="inputWrapper expenseCategoryGroup">
+                            <label class="inputLabel">Expense Category</label>
+                            <select id="inputCategoryExpense" class="cleanInput">
+                                <option value="Food">🍔 Food & Dining</option>
+                                <option value="Transport">🚗 Transport</option>
+                                <option value="Utilities">⚡ Utilities</option>
+                                <option value="Shopping">🛍️ Shopping</option>
+                                <option value="Other">📌 Other</option>
+                            </select>
+                        </div>
+
+                        <div class="inputWrapper incomeCategoryGroup">
+                            <label class="inputLabel">Income Category</label>
+                            <select id="inputCategoryIncome" class="cleanInput">
+                                <option value="Salary">💰 Salary/Income</option>
+                                <option value="Freelance">💻 Freelance</option>
+                                <option value="Investments">📈 Investments</option>
+                                <option value="Refund">🔄 Refund</option>
+                                <option value="Other">📌 Other</option>
+                            </select>
+                        </div>
+
+                        <div class="inputWrapper">
+                            <label class="inputLabel">Description</label>
+                            <input type="text" id="inputTransactionDesc" class="cleanInput" placeholder="e.g., AWS Hosting" autocomplete="off" required>
+                        </div>
+                        
+                        <div class="inputWrapper">
+                            <label class="inputLabel">Amount</label>
+                            <div class="currencyInputWrapper">
+                                <span class="currencySymbol">₹</span>
+                                <input type="number" id="inputTransactionAmt" class="cleanInput withCurrency" placeholder="1500" step="0.01" min="0" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="actionButtonPrimary">Save Transaction</button>
+                    </form>
+                </div>
+
+                <div class="splitColumn ledgerColumn">
+                    <div class="sectionHeaderWithAction">
+                        <h3 class="sectionTitle">Transaction History</h3>
+                    </div>
+                    <div class="ledgerScrollArea fullHeightScroll">
+                        <ul class="ledgerList" id="transactionLedgerList">
+                            </ul>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
